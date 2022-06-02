@@ -1,5 +1,9 @@
 ## Pokemon API
 
+deployed API: https://shawncannon-pokemonapi.herokuapp.com/api/pokemon
+
+****
+
 Your task is to build and deploy an API to create, read, update, and delete Pokemon. The API should:
 
 * Return a list of Pokemon in this format:
