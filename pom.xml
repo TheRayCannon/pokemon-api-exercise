@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pokemonlibrary</groupId>
-	<artifactId>poke-api-assignment</artifactId>
+	<artifactId>pokemon-api-exercise</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>pokeapi</name>
 	<description>Demo project for Spring Boot</description>
