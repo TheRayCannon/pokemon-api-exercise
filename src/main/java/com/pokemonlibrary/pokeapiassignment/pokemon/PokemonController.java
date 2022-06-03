@@ -38,7 +38,7 @@ public class PokemonController {
     public Map<String, Pokemon> read(@PathVariable Long id) {
         Pokemon pokemon = pokemonService
                 .findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("No resource with that ID"));
+                .orElseThrow(() -> new ResourceNotFoundException("No pokemon with that ID"));
         return createHashSingular(pokemon);
     }
 

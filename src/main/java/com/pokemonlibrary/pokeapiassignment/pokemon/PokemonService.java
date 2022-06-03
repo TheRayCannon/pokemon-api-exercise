@@ -8,29 +8,29 @@ import org.springframework.stereotype.Service;
 @Service
 public class PokemonService {
     @Autowired
-    private PokemonRepository PokemonRepository;
+    private PokemonRepository pokemonRepository;
 
     public Iterable<Pokemon> list() {
-        return PokemonRepository.findAll();
+        return pokemonRepository.findAll();
     }
 
     public Optional<Pokemon> findById(Long id) {
-        return PokemonRepository.findById(id);
+        return pokemonRepository.findById(id);
     }
 
     public Pokemon create(Pokemon pokemon) {
-        return PokemonRepository.save(pokemon);
+        return pokemonRepository.save(pokemon);
     }
 
     public Optional<Pokemon> update(Pokemon pokemon) {
-        Optional<Pokemon> foundPokemon = PokemonRepository.findById(pokemon.getId());
+        Optional<Pokemon> foundPokemon = pokemonRepository.findById(pokemon.getId());
 
         if (foundPokemon.isPresent()) {
             Pokemon updatedPokemon = foundPokemon.get();
             updatedPokemon.setName(pokemon.getName());
-            updatedPokemon.setImageurl(pokemon.getImageurl());
+            updatedPokemon.setImageUrl(pokemon.getImageUrl());
 
-            PokemonRepository.save(updatedPokemon);
+            pokemonRepository.save(updatedPokemon);
             return Optional.of(updatedPokemon);
         } else {
             return Optional.empty();
@@ -38,6 +38,6 @@ public class PokemonService {
     }
 
     public void deleteById(Long id) {
-        PokemonRepository.deleteById(id);
+        pokemonRepository.deleteById(id);
     }
 }
