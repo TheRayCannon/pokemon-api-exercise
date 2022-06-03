@@ -1,5 +1,12 @@
+DROP TABLE IF EXISTS pokemon;
+
+CREATE TABLE pokemon(
+    id INTEGER PRIMARY KEY,
+    name TEXT UNIQUE,
+    front_default TEXT UNIQUE
+);
 INSERT into 
-    pokemon(id, name, imageurl)
+    pokemon(id, name, front_default)
 VALUES
     (
         1,
