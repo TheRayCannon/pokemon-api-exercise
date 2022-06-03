@@ -28,7 +28,7 @@ public class PokemonService {
         if (foundPokemon.isPresent()) {
             Pokemon updatedPokemon = foundPokemon.get();
             updatedPokemon.setName(pokemon.getName());
-            updatedPokemon.setFront_default(pokemon.getFront_default());
+            updatedPokemon.setFrontDefault(pokemon.getFrontDefault());
 
             pokemonRepository.save(updatedPokemon);
             return Optional.of(updatedPokemon);
