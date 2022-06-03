@@ -1,5 +1,5 @@
 INSERT into 
-    pokemon(id, name, image_url)
+    pokemon(id, name, imageurl)
 VALUES
     (
         1,
