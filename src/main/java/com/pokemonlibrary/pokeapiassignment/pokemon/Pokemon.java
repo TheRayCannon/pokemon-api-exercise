@@ -20,7 +20,7 @@ public class Pokemon {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "frontDefault")
+    @Column(name = "front_default")
     private String frontDefault;
 
 }
